@@ -7,7 +7,7 @@
         <methods>
           <include name="defaultTimeOut"/>
           <include name="ConfigureAppium"/>
-          <include name="fillForm"/>
+          <include name="completePurchase"/>
         </methods>
       </class> <!-- appium.realTimeEcomApp.ProductList -->
     </classes>

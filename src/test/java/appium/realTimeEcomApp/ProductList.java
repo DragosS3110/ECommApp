@@ -2,6 +2,8 @@ package appium.realTimeEcomApp;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
@@ -9,6 +11,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Duration;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.Activity;
@@ -23,8 +26,8 @@ public class ProductList extends Utils{
 
 	public WebElement startBtn; 
 
-	@Test(priority=2)
-	public void fillForm() {
+	@Test(priority=1)
+	public void addProductToCart() {
 		
 		//go to the second page using activity	
 		//Activity activity = new Activity("a95dabc u0 com.androidsample.generalstore", "com.androidsample.generalstore.AllProductsActivity");
@@ -51,6 +54,17 @@ public class ProductList extends Utils{
 		}
 		
 		driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart")).click();
+	}
+	@Test(priority=2)
+	public void completePurchase() {
+		//Wait for the page to load
+		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+		
+		wait.until(ExpectedConditions.attributeContains(driver.findElement(By.id("com.androidsample.generalstore:id/toolbar_title"))
+				, "text", "Cart"));
+		
+		String productName = driver.findElement(By.id("com.androidsample.generalstore:id/productName")).getText();
+		Assert.assertEquals(productName, "Converse All Star");
 	}
 
 	
