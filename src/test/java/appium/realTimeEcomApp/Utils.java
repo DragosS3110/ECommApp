@@ -17,6 +17,7 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -37,7 +38,7 @@ public class Utils {
 		
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("SecondPhone");
-		options.setApp("//Users//dragossomlea//eclipse-workspace//RealTimeEcomApp//src//test//java//resources//General-Store.apk");
+		options.setApp("//Users//dragossomlea//eclipse-workspace//EcommApp//realTimeEcomApp//src//test//java//resources//General-Store.apk");
 		
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
 	}
@@ -93,6 +94,7 @@ public class Utils {
 		driver.quit();
 	}
 	@SuppressWarnings("deprecation")
+	@BeforeClass
 	public void defaultTimeOut() {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
