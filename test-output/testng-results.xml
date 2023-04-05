@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-05T13:43:55 EEST" name="Default suite" finished-at="2023-04-05T13:44:16 EEST" duration-ms="21040">
+  <suite started-at="2023-04-05T15:15:19 EEST" name="Default suite" finished-at="2023-04-05T15:15:41 EEST" duration-ms="21965">
     <groups>
     </groups>
-    <test started-at="2023-04-05T13:43:55 EEST" name="Default test" finished-at="2023-04-05T13:44:16 EEST" duration-ms="21040">
-      <class name="appium.realTimeEcomApp.ProductList">
-        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:appium.realTimeEcomApp.ProductList@433d61fb]" started-at="2023-04-05T13:43:55 EEST" name="ConfigureAppium" finished-at="2023-04-05T13:44:00 EEST" duration-ms="4273" status="PASS">
+    <test started-at="2023-04-05T15:15:19 EEST" name="Default test" finished-at="2023-04-05T15:15:41 EEST" duration-ms="21965">
+      <class name="appium.realTimeEcomApp.CalculateCart">
+        <test-method is-config="true" signature="ConfigureAppium()[pri:0, instance:appium.realTimeEcomApp.CalculateCart@65466a6a]" started-at="2023-04-05T15:15:19 EEST" name="ConfigureAppium" finished-at="2023-04-05T15:15:23 EEST" duration-ms="4235" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ConfigureAppium -->
-        <test-method is-config="true" signature="defaultTimeOut()[pri:0, instance:appium.realTimeEcomApp.ProductList@433d61fb]" started-at="2023-04-05T13:44:00 EEST" name="defaultTimeOut" finished-at="2023-04-05T13:44:00 EEST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="defaultTimeOut()[pri:0, instance:appium.realTimeEcomApp.CalculateCart@65466a6a]" started-at="2023-04-05T15:15:23 EEST" name="defaultTimeOut" finished-at="2023-04-05T15:15:23 EEST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- defaultTimeOut -->
-        <test-method signature="addProductToCart()[pri:1, instance:appium.realTimeEcomApp.ProductList@433d61fb]" started-at="2023-04-05T13:44:00 EEST" name="addProductToCart" finished-at="2023-04-05T13:44:16 EEST" duration-ms="16637" status="PASS">
+        <test-method signature="addProductToCart()[pri:1, instance:appium.realTimeEcomApp.CalculateCart@65466a6a]" started-at="2023-04-05T15:15:23 EEST" name="addProductToCart" finished-at="2023-04-05T15:15:41 EEST" duration-ms="17702" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductToCart -->
-        <test-method signature="completePurchase()[pri:2, instance:appium.realTimeEcomApp.ProductList@433d61fb]" started-at="2023-04-05T13:44:16 EEST" name="completePurchase" finished-at="2023-04-05T13:44:16 EEST" duration-ms="101" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- completePurchase -->
-      </class> <!-- appium.realTimeEcomApp.ProductList -->
+      </class> <!-- appium.realTimeEcomApp.CalculateCart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

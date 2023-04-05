@@ -89,6 +89,11 @@ public class Utils {
 		DeviceRotation portrait = new DeviceRotation(0, 0, 0);
 		driver.rotate(portrait);
 	}
+	public Double removeDollar(String text) {
+    	Double price = Double.parseDouble((text).substring(1));
+    	return price;
+
+	}
 	
 	public void tearDown() {
 		driver.quit();
