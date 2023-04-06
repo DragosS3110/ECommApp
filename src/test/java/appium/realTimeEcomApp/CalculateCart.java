@@ -66,8 +66,22 @@ public class CalculateCart extends Utils{
 	    String finalSum = driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl")).getText();
 	    double finalPrice = removeDollar(finalSum);
 	    Assert.assertEquals(sum, finalPrice);
-
-
-	
 }
+	
+	@Test(priority=2)
+	public void termsConditions() {
+		WebElement terms = (WebElement) driver.findElement(By.id("com.androidsample.generalstore:id/termsButton"));
+		longPressAction(terms);
+		
+		WebElement termsTitleObj = (WebElement) driver.findElement(By.id("com.androidsample.generalstore:id/alertTitle"));
+		String termsTitle = termsTitleObj.getText();
+		Assert.assertEquals(termsTitle, "Terms Of Conditions");
+		
+		//Close the terms and conditions
+		driver.findElement(By.xpath("//android.widget.Button[@text='CLOSE']")).click();
+		
+		driver.findElement(AppiumBy.className("android.widget.CheckBox")).click();
+		
+		driver.findElement(By.id("com.androidsample.generalstore:id/btnProceed")).click();
+	}
 }
