@@ -13,6 +13,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.List;
+import java.util.Set;
 
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.Activity;
@@ -83,5 +84,29 @@ public class CalculateCart extends Utils{
 		driver.findElement(AppiumBy.className("android.widget.CheckBox")).click();
 		
 		driver.findElement(By.id("com.androidsample.generalstore:id/btnProceed")).click();
+	}
+	@Test(priority=3)
+	public void hybridActions() throws InterruptedException {
+		// The code bellow iterates through all the app contexts
+		Thread.sleep(3000);
+		Set<String> contexts = driver.getContextHandles();
+		for (String contextName :contexts) {
+			System.out.println(contextName);
+		}
+		
+		//Context name is different for every app
+		// WEBVIEW_com.androidsample.generalstore  - Context for webview
+		// NATIVE_APP                              - Context for app
+		driver.context("WEBVIEW_com.androidsample.generalstore");
+		//scrollToEnd();
+		//driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Acceptă tot\"))"));
+		driver.findElement(By.xpath("//*[contains(text(),'mai multe')]")).click();
+
+		
+		Thread.sleep(3000);
+
+		pressAction(driver.findElement(By.xpath("//*[contains(text(),'Acceptă tot')]")));
+		//driver.findElement(By.xpath("//*[contains(text(),'Respinge tot')]")).click();
+
 	}
 }

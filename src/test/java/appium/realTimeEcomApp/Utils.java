@@ -38,6 +38,7 @@ public class Utils {
 		
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setDeviceName("MainPhone");
+		options.setChromedriverExecutable("//Users//dragossomlea//Downloads//chromedriver_mac_arm64//chromedriver");
 		options.setApp("//Users//dragossomlea//eclipse-workspace//EcommApp//realTimeEcomApp//src//test//java//resources//General-Store.apk");
 		
 		driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
@@ -47,6 +48,10 @@ public class Utils {
 		driver.executeScript("mobile: longClickGesture", ImmutableMap.of(
 			    "elementId", ((RemoteWebElement)ele).getId(),
 			    "duration", 2000));
+	}
+	public void pressAction (WebElement ele) {
+		driver.executeScript("mobile: clickGesture", ImmutableMap.of(
+			    "elementId", ((RemoteWebElement)ele).getId()));
 	}
 	public void scrollToEnd() {
 		

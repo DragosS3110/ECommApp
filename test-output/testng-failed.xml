@@ -6,6 +6,7 @@
       <class name="appium.realTimeEcomApp.CalculateCart">
         <methods>
           <include name="defaultTimeOut"/>
+          <include name="hybridActions"/>
           <include name="ConfigureAppium"/>
           <include name="addProductToCart"/>
         </methods>
