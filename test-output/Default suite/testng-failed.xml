@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="appium.realTimeEcomApp.CalculateCart">
+      <class name="appium.realTimeEcomApp.MobileBrowsertests">
         <methods>
-          <include name="defaultTimeOut"/>
-          <include name="hybridActions"/>
           <include name="ConfigureAppium"/>
-          <include name="addProductToCart"/>
+          <include name="defaultTimeOut"/>
+          <include name="browserTests"/>
         </methods>
-      </class> <!-- appium.realTimeEcomApp.CalculateCart -->
+      </class> <!-- appium.realTimeEcomApp.MobileBrowsertests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
